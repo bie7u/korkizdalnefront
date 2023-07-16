@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-title1 {
+    font-size: 4rem;
+}
+
+.header-title2 {
+    font-size: 4rem;
+    color: #6527BE;
+}
+
+.header-title3 {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 1200px) {
+    .header-image {
+      display: none;
+    }
+    .header-text {
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    .header-title3 {
+        text-align: center;
+    }
+}
+  

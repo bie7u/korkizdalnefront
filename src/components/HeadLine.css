@@ -1,0 +1,47 @@
+.vertical-line {
+    border-left: 0.15rem solid white;
+    height: 40px; 
+}
+
+.headline {
+    background: linear-gradient(90deg, rgba(150,129,235,1) 20%, rgba(255,255,255,1) 47%);
+    padding: 0.3rem;
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    align-items: center;
+    height: 50px;
+}
+
+.headline-title {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.headline-adress {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.headline-left {
+    color: white;
+    font-size: 2rem;
+}
+
+.headline-style-remote {
+    color: white;
+}
+
+@media (max-width: 1200px) {
+    .headline-left {
+        font-size: 1.5rem;
+    }
+    .headline {
+        display: flex;
+        justify-content: center;
+    }
+    .headline {
+        background: #9681EB;
+    }
+}

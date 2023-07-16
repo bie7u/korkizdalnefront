@@ -1,0 +1,15 @@
+.movie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-title {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.movie-title1 {
+    font-size: 2rem;
+}

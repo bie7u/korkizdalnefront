@@ -1,0 +1,10 @@
+.info-detail {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.info-detail-right-arrow {
+    width: 40px;
+    height: 40px;
+}

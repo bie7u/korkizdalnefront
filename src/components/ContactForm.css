@@ -1,0 +1,27 @@
+.contact-form {
+    width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    background-color: #F5F5F5;
+}
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.contact-form-title {
+    margin-top: 1rem;
+}
+
+.contact-form-title1 {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+}
+
+.contact-form-fields {
+    display: flex;
+    flex-direction: column;
+}

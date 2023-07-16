@@ -1,0 +1,34 @@
+.info {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-title1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.info-title2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #9681EB;
+}
+
+.info-detail-container {
+    margin-top: 1rem;
+    display: grid;
+    width: 80%;
+    grid-template-columns: 1fr 1fr; 
+    gap: 1rem; 
+}
+
+@media (max-width: 1200px) {
+    .info-detail-container {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+    }
+}
