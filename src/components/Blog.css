@@ -1,0 +1,26 @@
+.blog {
+    background: linear-gradient(162deg, rgba(255,255,255,1) 0%, rgba(128,179,228,1) 100%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.blog-title {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.blog-entries {
+    display: flex;
+    gap: 3rem;
+}
+
+@media (max-width: 1200px) {
+    .blog-entries {
+        display: flex;
+        flex-direction: column;
+    }
+}

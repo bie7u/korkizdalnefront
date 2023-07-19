@@ -1,9 +1,10 @@
 import React, {useState} from "react";
-import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
-import Stack from '@mui/material/Stack';
+import { MuiTelInput } from 'mui-tel-input'
+import LoadingButton from '@mui/lab/LoadingButton';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 import "./ContactForm.css"
 
 
@@ -13,6 +14,17 @@ const ContactForm = () => {
     const [email, setEmail] = useState("")
     const [phoneNumber, setPhoneNumber] = useState("")
     const [message, setMessage] = useState("")
+    const [loading, setLoading] = useState(false);
+
+    const handlePhoneNumber = (phoneNumber) => {
+        setPhoneNumber(phoneNumber)
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        console.log(name, lastName, email, phoneNumber, message)
+        setLoading(true);
+    }
 
     return (
         <div className='contact-form'>
@@ -20,30 +32,31 @@ const ContactForm = () => {
                 <span className='contact-form-title1'>Formularz Kontaktowy</span>
             </div>
             <div >
-            <Box className="contact-form-fields"
-                component="form"
-                sx={{
-                    '& > :not(style)': { m: 1, width: '25ch' },
-                }}
-                noValidate
-                autoComplete="off"
-                >
-                <TextField onChange={e => console.log(e.target.value)} required id="standard-basic" label="Imię" variant="standard" />
-                <TextField required id="standard-basic" label="Nazwisko" variant="standard" />
-                <TextField required id="standard-basic" label="Email" variant="standard" />
-                <TextField required id="standard-basic" label="Numer telefonu" variant="standard" />
+            <form className="contact-form-fields" autoComplete="off" onSubmit={handleSubmit}>
+                <TextField onChange={e => setName(e.target.value)} required id="standard-basic" label="Imię" variant="standard" />
+                <TextField onChange={e => setLastName(e.target.value)} required id="standard-basic" label="Nazwisko" variant="standard" />
+                <TextField type="email" onChange={e => setEmail(e.target.value)} required id="standard-basic" label="Email" variant="standard" />
+                <MuiTelInput focusOnSelectCountry label="Numer telefonu" variant="outlined" value={phoneNumber} onChange={handlePhoneNumber} defaultCountry="PL" onlyCountries={['PL']} required />
                 <TextField
-                        id="outlined-multiline-static"
+                        onChange={e => setMessage(e.target.value)}
+                        id="standard-multiline-flexible"
                         label="Dodatkowa wiadomość"
                         multiline
-                        rows={4}
+                        maxRows={4}
+                        variant="standard"
                         />
-                    <Stack direction="row" spacing={2}>
-                        <Button variant="contained" endIcon={<SendIcon />}>
-                            Wyślij wiadomość
-                        </Button>
-                    </Stack>
-            </Box>
+                <FormControlLabel required control={<Checkbox />} label="Akceptuję regulamin" />
+                <LoadingButton
+                  size="small"
+                  type='submit'
+                  endIcon={<SendIcon />}
+                  loading={loading}
+                  loadingPosition="end"
+                  variant="contained"
+                >
+                  <span>Wyślij wiadomość</span>
+                </LoadingButton>
+            </form>
             </div>
         </div>
     )

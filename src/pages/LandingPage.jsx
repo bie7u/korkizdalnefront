@@ -5,6 +5,8 @@ import Questions from "../components/Questions";
 import Info from "../components/Info";
 import Movie from "../components/Movie";
 import ContactForm from "../components/ContactForm";
+import BuyTutor from "../components/BuyTutor";
+import Blog from "../components/Blog";
 import "./LandingPage.css"
 
 
@@ -18,9 +20,17 @@ const LandingPage = () => {
             <Info />
             <Movie />
             <div className='contact-forms'>
-                <ContactForm />
-                <ContactForm />
+                <div className='contact1'>
+                    <span className='contact1-text'>Jeżeli chcesz omówić szczegóły zapraszmy do wypełnienia formularza kontaktowego. Zadzwonimy najszybciej jak możemy.</span>
+                    <ContactForm />
+                </div>
+
+                <div className='contact2'>
+                    <span className='contact1-text'>Jeżeli jesteś zdecydowany - zarezerwuj swoją pierwszą lekcję.</span>
+                    <BuyTutor />
+                </div>
             </div>
+            <Blog />
         </div>
     )
 }

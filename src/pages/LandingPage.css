@@ -15,8 +15,54 @@
     display: flex;
     justify-content: center;
     gap: 5rem;
+    margin-bottom: 5rem;
+}
+
+.contact1 {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.contact2 {
+    width: 800px;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.contact1-text {
+    font-size: 1rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 span {
     font-size: 20px;
+}
+
+
+@media (max-width: 1200px) {
+    .contact-forms {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .contact1 {
+        width: 100%;
+    }
+    .contact2 {
+        width: 100%;
+    }
+    .contact-forms {
+        gap: 2rem;
+    }
 }
