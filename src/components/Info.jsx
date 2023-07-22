@@ -3,7 +3,7 @@ import "./Info.css"
 import InfoDetail from "./InfoDetail";
 
 
-const Info = () => {
+const Info = ({infoData}) => {
 
     return (
         <div className='info'>
@@ -11,10 +11,11 @@ const Info = () => {
                 <span className='info-title1'>Jesteśmy</span><span className='info-title2'> dla osób które...</span>
             </div>
             <div className='info-detail-container'>
-                <InfoDetail />
-                <InfoDetail />
-                <InfoDetail />
-                <InfoDetail />
+            {infoData.data.map((info, index) => (
+            <div key={index} className='item'>
+                <InfoDetail infoDetail={{info}} />
+            </div>
+            ))}
             </div>
 
         </div>

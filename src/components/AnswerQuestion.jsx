@@ -7,7 +7,9 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import "./AnswerQuestion.css"
 
 
-const AnswerQuestion = () => {
+const AnswerQuestion = ({question}) => {
+    const title = question.question.title
+    const more_info = question.question.more_info
 
     return (
         <div>
@@ -17,12 +19,11 @@ const AnswerQuestion = () => {
             aria-controls="panel1a-content"
             id="panel1a-header"
             >
-                <Typography>Accordion 1</Typography>
+                <Typography>{title}</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                 <Typography>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                    malesuada lacus ex, sit amet blandit leo lobortis eget.
+                    {more_info}
                 </Typography>
             </AccordionDetails>
         </Accordion>
