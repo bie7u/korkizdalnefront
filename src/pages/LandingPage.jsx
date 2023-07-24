@@ -7,6 +7,7 @@ import Movie from "../components/Movie";
 import ContactForm from "../components/ContactForm";
 import BuyTutor from "../components/BuyTutor";
 import Blog from "../components/Blog";
+import Footer from "../components/Footer";
 import { useParams, useNavigate } from "react-router-dom";
 import {fetchData, postData} from '../services/apiService';
 import "./LandingPage.css";
@@ -57,6 +58,7 @@ const LandingPage = (props) => {
               .catch((error) => {
                 console.error('Error:', error);
               });
+            // Blog Data
             fetchData(`landingpage/landing_page/${responseData[0].id}/blog/`)
               .then((responseData) => {
                 setBlogData(responseData);
@@ -83,12 +85,13 @@ const LandingPage = (props) => {
                     <ContactForm />
                 </div>
 
-                <div className='contact2'>
+                {/* <div className='contact2'>
                     <span className='contact1-text'>Jeżeli jesteś zdecydowany - zarezerwuj swoją pierwszą lekcję.</span>
                     <BuyTutor />
-                </div>
+                </div> */}
             </div>
             <Blog blogData={{'data': blogData}}/>
+            <Footer />
         </div>
     )
 }

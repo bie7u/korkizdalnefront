@@ -14,9 +14,6 @@ const Blog = ({blogData}) => {
                     <BlogEntry blogDetail={{blog}} />
                 </div>
                 ))}
-                {/* <BlogEntry />
-                <BlogEntry />
-                <BlogEntry /> */}
             </div>
             
         </div>
