@@ -55,7 +55,7 @@ const ContactForm = () => {
             "accept_rules": acceptRules
         }
         try {
-            const response = await postData('/management/contact_form/', formData);
+            const response = await postData('management/contact_form/', formData);
             console.log('Response from server:', response);
             resetForm();
             setFormSubmitted(true);
