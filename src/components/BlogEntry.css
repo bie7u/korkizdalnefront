@@ -3,7 +3,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 400px;
+    width: 300px;
 }
 
 .blog-entry-presentation {
@@ -44,5 +44,8 @@ textarea:read-only {
 
     .blog-entry-text-area {
         height: 600px;
+    }
+    .blog-entry {
+        width: 300px;
     }
 }

@@ -23,7 +23,7 @@ const BlogEntry = ({blogDetail}) => {
     return (
       <div className="blog-entry">
         <div className="blog-entry-presentation" onClick={handleOpen}>
-            <img src={picture} width={400} height={220}/>
+            <img src={picture} width={350} height={220}/>
             <Button fullWidth sx={titleStyle}>{title}</Button>
         </div>
         <Modal
