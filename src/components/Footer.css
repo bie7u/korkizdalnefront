@@ -1,4 +1,11 @@
 .footer {
+    display: flex;
+    justify-content: center;
     margin-top: 4rem;
-    background-color: rgba(150,129,235,1);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(128,179,228,1) 48%, rgba(255,255,255,1) 100%);
+    padding: 1rem;
+}
+
+.footer-text {
+    color: white;
 }

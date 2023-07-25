@@ -6,7 +6,7 @@ const Footer = () => {
 
     return (
         <div className='footer'>
-            siema
+            <span className='footer-text'>© 2023 Wszelkie prawa zastrzeżone</span>
         </div>
     )
 }
