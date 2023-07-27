@@ -85,10 +85,10 @@ const LandingPage = (props) => {
                     <ContactForm />
                 </div>
 
-                <div className='contact2'>
+                {/* <div className='contact2'>
                     <span className='contact1-text'>Jeżeli jesteś zdecydowany - zarezerwuj swoją pierwszą lekcję.</span>
                     <BuyTutor />
-                </div>
+                </div> */}
             </div>
             <Blog blogData={{'data': blogData}}/>
             <Footer />
