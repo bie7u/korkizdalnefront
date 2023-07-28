@@ -13,9 +13,13 @@ const CheckoutPage = () => {
                 
                 <div className='checkout-page-m'>
                     <span className='checkout-page-title'>Koszyk</span>
-                    <div>
+                    <div className='checkout-main-container'>
                         <div className='checkout-form'>
                             <CheckoutForm />
+                        </div>
+
+                        <div className='checkout-buy-list'>
+                           
                         </div>
                     </div>
                 </div>

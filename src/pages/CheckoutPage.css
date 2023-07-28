@@ -20,5 +20,15 @@
 }
 
 .checkout-form {
-    width: 70%;
+    min-width: 70%;
+    margin-right: 2rem;
+}
+
+.checkout-main-container {
+    display: flex;
+}
+
+.checkout-buy-list {
+    background-color: #24116e;
+    width: 100%;
 }

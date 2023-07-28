@@ -13,6 +13,8 @@ import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 import LoadingButton from '@mui/lab/LoadingButton';
 import SendIcon from '@mui/icons-material/Send';
 import 'dayjs/locale/pl'; 
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 import "./CheckoutForm.css";
 
 
@@ -71,6 +73,10 @@ const CheckoutForm = () => {
                             {/* <MenuItem value={'Rodzic'}>Rodzic</MenuItem> */}
                         </Select>
                 </FormControl>
+                </div>
+                <div className="checkout-form-first-column">
+                <FormControlLabel required control={<Checkbox />} label="Akceptuję regulamin" />
+                </div>
                 <LoadingButton
                   size="small"
                   type='submit'
@@ -81,7 +87,7 @@ const CheckoutForm = () => {
                 >
                   <span>Zapłać</span>
                 </LoadingButton>
-            </div>
+            
 
         </div>
     )
