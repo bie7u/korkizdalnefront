@@ -29,6 +29,7 @@
 }
 
 .checkout-buy-list {
-    background-color: #24116e;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    background-color: #F5F5F5;
     width: 100%;
 }
