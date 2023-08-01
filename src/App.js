@@ -7,9 +7,7 @@ import DashboardPage from './pages/DashboardPage';
 function App() {
   return (
     <Router>
- 
       <Routes>
-        {/* <Route path="/" exact element={<Notes />} /> */}
         <Route path="/korepetycje/:dynamicWord" element={<LandingPage />} />
         <Route path="/koszyk/" element={<CheckoutPage />} />
         <Route path="/logowanie/" element={<LoginPage />} />
