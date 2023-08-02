@@ -3,6 +3,7 @@ import LandingPage from "./pages/LandingPage";
 import CheckoutPage from './pages/CheckoutPage';
 import LoginPage from './pages/LoginPage';
 import DashboardPage from './pages/DashboardPage';
+import MyLessonsPage from './pages/MyLessonsPage';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/koszyk/" element={<CheckoutPage />} />
         <Route path="/logowanie/" element={<LoginPage />} />
         <Route path="/panel_uzytkownika/" element={<DashboardPage />} />
+        <Route path="/panel_uzytkownika/moje_korepetycje/" element={<MyLessonsPage />} />
       </Routes>
     </Router>
   );

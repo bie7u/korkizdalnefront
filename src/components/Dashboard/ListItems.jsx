@@ -1,10 +1,12 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import ListSubheader from '@mui/material/ListSubheader';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import LogoutIcon from '@mui/icons-material/Logout';
 import ErrorIcon from '@mui/icons-material/Error';
 import SchoolIcon from '@mui/icons-material/School';
 import PeopleIcon from '@mui/icons-material/People';
@@ -16,13 +18,13 @@ import AssignmentIcon from '@mui/icons-material/Assignment';
 
 export const mainListItems = (
   <React.Fragment>
-    <ListItemButton>
+    <ListItemButton component={Link} to="/ogolne">
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Ogólne" />
     </ListItemButton>
-    <ListItemButton>
+    <ListItemButton component={Link} to="/panel_uzytkownika/moje_korepetycje/">
       <ListItemIcon>
         <SchoolIcon />
       </ListItemIcon>
@@ -62,9 +64,9 @@ export const secondaryListItems = (
     </ListSubheader>
     <ListItemButton>
       <ListItemIcon>
-        <AssignmentIcon />
+        <LogoutIcon />
       </ListItemIcon>
-      <ListItemText primary="Current month" />
+      <ListItemText primary="Wyloguj się" />
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>

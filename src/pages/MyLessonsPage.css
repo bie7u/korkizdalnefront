@@ -1,0 +1,22 @@
+.my-lessons {
+    margin-left: 20rem;
+    margin-top: 2rem;
+}
+
+.my-lessons-sc-main {
+    display: flex;
+    justify-content: left;
+}
+
+.my-lessons-title {
+    font-size: 3rem;
+    color: #6527BE
+}
+
+
+@media (max-width: 1200px) {
+    .my-lessons {
+        margin-left: 5rem;
+    }
+}
+  
