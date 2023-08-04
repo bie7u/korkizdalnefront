@@ -4,6 +4,8 @@ import CheckoutPage from './pages/CheckoutPage';
 import LoginPage from './pages/LoginPage';
 import DashboardPage from './pages/DashboardPage';
 import MyLessonsPage from './pages/MyLessonsPage';
+import ProfilePage from './pages/ProfilePage';
+
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
         <Route path="/logowanie/" element={<LoginPage />} />
         <Route path="/panel_uzytkownika/" element={<DashboardPage />} />
         <Route path="/panel_uzytkownika/moje_korepetycje/" element={<MyLessonsPage />} />
+        <Route path="/panel_uzytkownika/profil/" element={<ProfilePage />} />
       </Routes>
     </Router>
   );
