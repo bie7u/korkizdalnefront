@@ -78,7 +78,7 @@ const LandingPage = (props) => {
             <Header headerData={{'data': headerData}} />
             <Questions questionsData={{'data': questionsData}} />
             <Info infoData={{'data': infoData}} />
-            <Movie />
+            {/* <Movie /> */}
             <div className='contact-forms'>
                 <div className='contact1'>
                     <span className='contact1-text'>Jeżeli chcesz omówić szczegóły zapraszmy do wypełnienia formularza kontaktowego. Zadzwonimy najszybciej jak możemy.</span>
