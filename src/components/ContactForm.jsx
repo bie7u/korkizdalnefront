@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { useParams } from "react-router-dom";
 import TextField from '@mui/material/TextField';
 import SendIcon from '@mui/icons-material/Send';
 import { MuiTelInput } from 'mui-tel-input';
@@ -12,6 +13,7 @@ import "./ContactForm.css";
 
 
 const ContactForm = () => {
+    const { dynamicWord } = useParams();
     const [name, setName] = useState("")
     const [lastName, setLastName] = useState("")
     const [email, setEmail] = useState("")
@@ -52,7 +54,8 @@ const ContactForm = () => {
             "email": email,
             "phone_number": phoneNumber,
             "additional_message": message,
-            "accept_rules": acceptRules
+            "accept_rules": acceptRules,
+            "lesson": dynamicWord
         }
         try {
             const response = await postData('management/contact_form/', formData);
